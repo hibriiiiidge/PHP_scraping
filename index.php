@@ -7,12 +7,13 @@
       $(function(){
         $(document).on("click", ".getBtn", function(){
           var targetWords = $("#targetWords").val();  //検索対象のワード
+          //@TODO バリデーション とりま簡易バリデ
           if(contChk(targetWords)==false){
             alert("検索ワードを確認してください。");
             return false;
           }
 
-          var pageNum     = $(".more").data("round"); //ページナンバー（何ページ目を次に表示するか 1ページ目 null）
+          var pageNum = $(".more").data("round"); //ページナンバー（何ページ目を次に表示するか 1ページ目 null）
           if(!pageNum){$("#result").html('');}        //検索対象のワードを再度設定した場合、前検索結果を削除する処理
 
           $.ajax({
