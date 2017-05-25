@@ -55,7 +55,7 @@
               $(".item").eq(i+addNum).append($('<img>').attr({src:val.img}));
             });
             //商品が50商品だったら (50商品が1ページに表示される最大値)
-            //@TODO 検索商品が50商品丁度だった場合に"更に読み込む"が表示されてしまう
+            //@TODO 検索商品が50商品丁度だった場合に"更に読み込む"が表示されるので非表示に
             if(data.items.length == 50){
               $(targetResult).append($('<button>').text("▼更に読み込む").attr({class: 'more getBtn', 'data-round': pN, id: 'moreBtn'+pN}));
               //前ページの"更に〜"ボタンを消去する
